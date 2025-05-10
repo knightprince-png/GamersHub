@@ -7,3 +7,4 @@ const val ROUT_SPLASH = "splash"
 //Auth
 const val ROUT_REGISTER = "Register"
 const val ROUT_LOGIN = "Login"
+const val ROUT_LANDING = "Landing"

@@ -9,19 +9,21 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.felix.gamers_hub.repository.UserRepository
 import com.felix.gamers_hub.ui.screens.about.AboutScreen
+import com.felix.gamers_hub.ui.screens.auth.RegisterScreen
 import com.felix.gamers_hub.ui.screens.home.HomeScreen
+import com.felix.gamers_hub.ui.screens.landing.LandingScreen
 import com.felix.gamers_hub.ui.screens.spash.SplashScreen
 import com.felix.gamers_hub.viewmodel.AuthViewModel
 import com.felix.harakamall.data.UserDatabase
 import com.felix.harakamall.ui.Screens.auth.LoginScreen
 
-import com.felix.harakamall.ui.screens.auth.RegisterScreen
+
 
 @Composable
 fun AppNavHost(
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
-    startDestination: String = ROUT_HOME
+    startDestination: String = ROUT_SPLASH
 ) {
     val context = LocalContext.current
 
@@ -43,7 +45,7 @@ fun AppNavHost(
         val authRepository = UserRepository(appDatabase.userDao())
         val authViewModel: AuthViewModel = AuthViewModel(authRepository)
         composable(ROUT_REGISTER) {
-            RegisterScreen (authViewModel, navController) {
+            RegisterScreen  (authViewModel, navController) {
                 navController.navigate(ROUT_LOGIN) {
                     popUpTo(ROUT_REGISTER) { inclusive = true }
                 }
@@ -60,6 +62,10 @@ fun AppNavHost(
         composable(ROUT_SPLASH) {
             SplashScreen(navController)
         }
+        composable(ROUT_LANDING) {
+            LandingScreen(navController)
+        }
+
 
 
 

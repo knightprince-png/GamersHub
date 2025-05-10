@@ -33,6 +33,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.felix.gamers_hub.navigation.ROUT_LANDING
 import com.felix.gamers_hub.navigation.ROUT_LOGIN
 import com.felix.gamers_hub.navigation.ROUT_REGISTER
 import com.felix.gamers_hub.ui.screens.home.HomeScreen
@@ -50,8 +51,8 @@ fun SplashScreen(navController: NavHostController) {
                 OvershootInterpolator(2f).getInterpolation(it)
             })
         )
-        delay(2000)
-        navController.navigate(ROUT_LOGIN)
+        delay(3500)
+        navController.navigate(ROUT_LANDING)
 
     }
 

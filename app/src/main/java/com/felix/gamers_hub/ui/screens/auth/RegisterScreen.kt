@@ -1,4 +1,4 @@
-package com.felix.harakamall.ui.screens.auth
+package com.felix.gamers_hub.ui.screens.auth
 
 import android.widget.Toast
 import androidx.compose.animation.AnimatedVisibility
