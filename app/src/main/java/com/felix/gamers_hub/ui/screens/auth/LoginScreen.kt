@@ -30,6 +30,7 @@ import androidx.navigation.NavController
 import com.felix.gamers_hub.R
 import com.felix.gamers_hub.navigation.ROUT_ABOUT
 import com.felix.gamers_hub.navigation.ROUT_HOME
+import com.felix.gamers_hub.navigation.ROUT_HOMEPAGE
 import com.felix.gamers_hub.navigation.ROUT_REGISTER
 import com.felix.gamers_hub.viewmodel.AuthViewModel
 
@@ -54,7 +55,7 @@ fun LoginScreen(
                     navController.navigate(ROUT_HOME) {
                     }
                 } else {
-                    navController.navigate(ROUT_ABOUT){
+                    navController.navigate(ROUT_HOMEPAGE){
                     }
                 }
             }
