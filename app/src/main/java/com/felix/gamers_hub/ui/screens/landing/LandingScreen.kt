@@ -47,7 +47,7 @@ fun LandingScreen(navController: NavController){
         Image(
             painter = painterResource(R.drawable.game2),
             contentDescription = "img",
-            modifier = Modifier.fillMaxWidth().height(500.dp),
+            modifier = Modifier.fillMaxWidth().height(600.dp),
             contentScale = ContentScale.FillWidth
             )
         Spacer(modifier = Modifier.height(25.dp))
