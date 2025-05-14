@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -72,50 +73,11 @@ fun HomePageScreen(navController: NavController){
 
         Image(painter = painterResource(R.drawable.promo),
             contentDescription = "img",
-            modifier = Modifier.fillMaxWidth().height(200.dp),
+            modifier = Modifier.fillMaxWidth().fillMaxHeight(),
             contentScale = ContentScale.FillWidth
         )
         Spacer(modifier = Modifier.height(30.dp))
 
-        //search bar
-        var search by remember { mutableStateOf("") }
-        OutlinedTextField(
-            value = search,
-            onValueChange = {search=it},
-            modifier = Modifier.fillMaxWidth().padding(start = 20.dp),
-            leadingIcon = { Icon(imageVector = Icons.Default.Search, contentDescription = "") },
-            placeholder = { Text(text = "Search") }
-
-        )
-
-
-
-
-        //end of search bar
-        Spacer(modifier = Modifier.height(30.dp))
-        Column() {
-            //start of row
-            Row (modifier = Modifier.padding(start = 25.dp)){
-
-                Row {
-
-                    Spacer(modifier = Modifier.width(20.dp))
-                    Button(onClick = {
-                        navController.navigate(ROUT_HOME)
-
-                    },
-                        colors = ButtonDefaults.buttonColors(Blue),
-                        shape = RoundedCornerShape(10.dp),
-                        modifier = Modifier.fillMaxWidth()
-                    ) {
-                        Text( text = "Products")
-                    }
-
-
-                }
-
-            }
-            //end of row
 
 
         }
@@ -126,7 +88,7 @@ fun HomePageScreen(navController: NavController){
 
 
 
-}
+
 
 
 

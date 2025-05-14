@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.Gamers_Hub" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.Gamers_Hub" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowSplashScreenBackground">@color/black</item>
+        <item name="android:windowSplashScreenAnimationDuration">5400</item>
+
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ani5</item>
+
+    </style>
 </resources>

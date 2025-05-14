@@ -30,12 +30,14 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.felix.gamers_hub.navigation.ROUT_ASUS
+import com.felix.gamers_hub.ui.theme.Black
 
 @Composable
 fun PhoneScreen(navController: NavController){
 
     Column(
         modifier = Modifier
+            .background(Color.Black)
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
             .padding(16.dp),
@@ -45,7 +47,7 @@ fun PhoneScreen(navController: NavController){
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(Color.LightGray)
+                .background(Color.Black)
                 .padding(8.dp)
         ) {
             Image(
@@ -68,7 +70,7 @@ fun PhoneScreen(navController: NavController){
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(Color.LightGray)
+                .background(Color.Black)
                 .padding(8.dp)
         ) {
             Image(
@@ -92,7 +94,7 @@ fun PhoneScreen(navController: NavController){
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(Color.LightGray)
+                .background(Color.Black)
                 .padding(8.dp)
         ) {
             Image(
@@ -114,7 +116,7 @@ fun PhoneScreen(navController: NavController){
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(Color.LightGray)
+                .background(Color.Black)
                 .padding(8.dp)
         ) {
             Image(
@@ -136,7 +138,7 @@ fun PhoneScreen(navController: NavController){
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(Color.LightGray)
+                .background(Color.Black)
                 .padding(8.dp)
         ) {
             Image(
@@ -158,7 +160,7 @@ fun PhoneScreen(navController: NavController){
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(Color.LightGray)
+                .background(Color.Black)
                 .padding(8.dp)
         ) {
             Image(
@@ -179,7 +181,7 @@ fun PhoneScreen(navController: NavController){
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(Color.LightGray)
+                .background(Color.Black)
                 .padding(8.dp)
         ) {
             Image(
@@ -201,7 +203,7 @@ fun PhoneScreen(navController: NavController){
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(Color.LightGray)
+                .background(Color.Black)
                 .padding(8.dp)
         ) {
             Image(
@@ -238,6 +240,6 @@ fun PhoneScreen(navController: NavController){
 
 @Preview(showBackground = true)
 @Composable
-fun AboutScreenPreview(){
+fun PhoneScreenPreview(){
     PhoneScreen(navController= rememberNavController())
 }

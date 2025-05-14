@@ -1,15 +1,12 @@
 package com.felix.gamers_hub.navigation
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.R
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.felix.gamers_hub.model.Products
-import com.felix.gamers_hub.navigation.ROUT_PHONE
 import com.felix.gamers_hub.repository.UserRepository
 import com.felix.gamers_hub.ui.screens.about.AboutScreen
 import com.felix.gamers_hub.ui.screens.auth.RegisterScreen
@@ -21,7 +18,7 @@ import com.felix.gamers_hub.ui.screens.products.AsusPageScreen
 import com.felix.gamers_hub.ui.screens.products.IphonePageScreen
 import com.felix.gamers_hub.ui.screens.products.LenovoPageScreen
 import com.felix.gamers_hub.ui.screens.products.PixelPageScreen
-import com.felix.gamers_hub.ui.screens.spash.SplashScreen
+import com.felix.gamers_hub.ui.screens.splash.SplashScreen
 import com.felix.gamers_hub.viewmodel.AuthViewModel
 import com.felix.harakamall.data.UserDatabase
 import com.felix.harakamall.ui.Screens.auth.LoginScreen
@@ -32,7 +29,7 @@ import com.felix.harakamall.ui.Screens.auth.LoginScreen
 fun AppNavHost(
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
-    startDestination: String = ROUT_PHONE
+    startDestination: String = ROUT_SPLASH
 ) {
 
     val context = LocalContext.current

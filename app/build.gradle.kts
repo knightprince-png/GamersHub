@@ -80,7 +80,29 @@ dependencies {
 //livedata
     implementation("androidx.compose.runtime:runtime-livedata:1.6.4")
 
+implementation("androidx.core:core-splashscreen:1.0.1")
+
+
+
+        implementation("io.coil-kt:coil-compose:2.4.0")
+        implementation("io.coil-kt:coil-gif:2.4.0")
+
+
+// ExoPlayer core
+    implementation("androidx.media3:media3-exoplayer:1.3.1")
+
+// Optional UI components (if using PlayerView in XML or Compose interop)
+    implementation("androidx.media3:media3-ui:1.3.1")
+
+
+    implementation("androidx.compose.ui:ui:1.6.0")
+    implementation("androidx.activity:activity-compose:1.9.0")
+
+
+
 
 }
+
+
 
 
