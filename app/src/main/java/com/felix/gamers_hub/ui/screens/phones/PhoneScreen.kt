@@ -62,7 +62,7 @@ fun PhoneScreen(navController: NavController){
                     .clickable(onClick = { navController.navigate(ROUT_ASUS) })
                     .width(200.dp).height(190.dp)
                     .clip(shape = RoundedCornerShape(10.dp)),
-                contentScale = ContentScale.Fit
+                contentScale = ContentScale.FillBounds
             )
 
             Spacer(modifier = Modifier.height(8.dp))

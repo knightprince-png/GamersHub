@@ -16,8 +16,8 @@ import com.felix.gamers_hub.ui.screens.landing.LandingScreen
 import com.felix.gamers_hub.ui.screens.phones.PhoneScreen
 import com.felix.gamers_hub.ui.screens.products.AsusPageScreen
 import com.felix.gamers_hub.ui.screens.products.IphonePageScreen
-import com.felix.gamers_hub.ui.screens.products.LenovoPageScreen
 import com.felix.gamers_hub.ui.screens.products.PixelPageScreen
+import com.felix.gamers_hub.ui.screens.products.VivoPageScreen
 import com.felix.gamers_hub.ui.screens.splash.SplashScreen
 import com.felix.gamers_hub.viewmodel.AuthViewModel
 import com.felix.harakamall.data.UserDatabase
@@ -29,7 +29,7 @@ import com.felix.harakamall.ui.Screens.auth.LoginScreen
 fun AppNavHost(
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
-    startDestination: String = ROUT_SPLASH
+    startDestination: String = ROUT_PHONE
 ) {
 
     val context = LocalContext.current
@@ -78,8 +78,8 @@ fun AppNavHost(
         composable(ROUT_ASUS){
             AsusPageScreen(navController)
         }
-        composable(ROUT_LENOVO){
-            LenovoPageScreen(navController)
+        composable(ROUT_VIVO){
+            VivoPageScreen(navController)
         }
         composable(ROUT_IPHONE){
             IphonePageScreen(navController)
