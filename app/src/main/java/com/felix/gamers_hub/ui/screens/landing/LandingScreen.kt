@@ -29,6 +29,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import coil.decode.ImageSource
 import com.felix.gamers_hub.R
+import com.felix.gamers_hub.navigation.ROUT_HOME
 import com.felix.gamers_hub.navigation.ROUT_REGISTER
 import com.felix.gamers_hub.ui.theme.Black
 import com.felix.gamers_hub.ui.theme.Darkblue
@@ -64,7 +65,7 @@ fun LandingScreen(navController: NavController){
 
 
         Button(onClick = {
-            navController.navigate (ROUT_REGISTER )
+            navController.navigate (ROUT_HOME)
         },
             modifier = Modifier.fillMaxWidth().height(40.dp),
             colors = ButtonDefaults.buttonColors(Darkblue),

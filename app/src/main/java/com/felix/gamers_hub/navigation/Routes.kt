@@ -13,4 +13,26 @@ const val ROUT_ASUS = "asus"
 const val ROUT_IPHONE = "iphone"
 const val ROUT_VIVO = "vivo"
 const val ROUT_PIXEL = "pixel"
+const val ROUT_LEGION = "legion"
+const val ROUT_IPAD = "ipad"
+const val ROUT_TAB = "tab"
+const val ROUT_BLACK = "black"
+const val ROUT_XIAOMI = "xiaomi"
+const val ROUT_ONE = "one"
+const val ROUT_TABS = "tabs"
 const val ROUT_PHONE = "phone"
+
+
+
+
+
+//Products
+
+const val ROUT_ADD_PRODUCT = "add_product"
+const val ROUT_PRODUCT_LIST = "product_list"
+const val ROUT_EDIT_PRODUCT = "edit_product/{productId}"
+
+// ✅ Helper function for navigation
+fun editProductRoute(productId: Int) = "edit_product/$productId"
+
+

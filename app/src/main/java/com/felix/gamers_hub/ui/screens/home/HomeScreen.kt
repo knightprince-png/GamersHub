@@ -31,7 +31,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.paint
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -66,25 +68,6 @@ fun HomeScreen(navController: NavController) {
                         //navController.navigate(ROUT_HOME)
                     }
                 )
-                NavigationBarItem(
-                    icon = { Icon(Icons.Default.ShoppingCart, contentDescription = "Cart") },
-                    label = { Text("Favorites") },
-                    selected = selectedIndex == 1,
-                    onClick = {
-                        selectedIndex = 1
-                        // navController.navigate(ROUT_HOME)
-                    }
-                )
-                NavigationBarItem(
-                    icon = { Icon(Icons.Default.Person, contentDescription = "Profile") },
-                    label = { Text("Profile") },
-                    selected = selectedIndex == 2,
-                    onClick = {
-                        selectedIndex = 2
-                        //  navController.navigate(ROUT_HOME)
-                    }
-                )
-
             }
         },
 
@@ -93,6 +76,8 @@ fun HomeScreen(navController: NavController) {
 
             Column(
                 modifier = Modifier
+                    .paint(painter = painterResource(com.felix.gamers_hub.R.drawable.img), contentScale = ContentScale.FillBounds)
+
                     .fillMaxSize()
                     .verticalScroll(rememberScrollState())
                     .padding(paddingValues),
