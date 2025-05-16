@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -17,6 +18,7 @@ import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
@@ -43,6 +45,8 @@ import com.felix.gamers_hub.R
 
 import com.felix.gamers_hub.navigation.ROUT_HOMEPAGE
 import com.felix.gamers_hub.navigation.ROUT_PHONE
+import com.felix.gamers_hub.navigation.ROUT_TAB
+import com.felix.gamers_hub.navigation.ROUT_TABLET
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -57,11 +61,12 @@ fun HomeScreen(navController: NavController) {
         //BottomBar
         bottomBar = {
             NavigationBar(
-                containerColor = Color.White
+                containerColor = Color.Black,
+                contentColor = Color.Cyan
             ) {
                 NavigationBarItem(
                     icon = { Icon(Icons.Default.Home, contentDescription = "Home") },
-                    label = { Text("Home") },
+                    label = { Text("Home", modifier = Modifier.padding(10.dp)) },
                     selected = selectedIndex == 0,
                     onClick = {
                         navController.navigate(ROUT_HOMEPAGE)
@@ -88,18 +93,22 @@ fun HomeScreen(navController: NavController) {
                     modifier = Modifier
                         .fillMaxWidth()
 
-                        .padding(8.dp)
+                        .padding(8.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Image(
                         painter = painterResource(id = R.drawable.phones),
                         contentDescription = "Image 1",
                         modifier = Modifier
-                            .fillMaxWidth()
+                            .padding(start = 10.dp)
+                            .width(200.dp)
                             .height(200.dp)
-                            .clip(RoundedCornerShape(12.dp))
-                    )
+                            .clip(RoundedCornerShape(12.dp)),
+                        )
                     Spacer(modifier = Modifier.height(8.dp))
-                    Button(onClick = { ROUT_PHONE }, modifier = Modifier.fillMaxWidth().align(Alignment.CenterHorizontally)) {
+                    Button(onClick = {navController.navigate(ROUT_PHONE) }, colors = ButtonDefaults.buttonColors(
+                        containerColor = Color.Black, contentColor = Color.Cyan
+                    ), modifier = Modifier.fillMaxWidth().align(Alignment.CenterHorizontally)) {
                         Text("Tap to view products")
                     }
                 }
@@ -108,20 +117,26 @@ fun HomeScreen(navController: NavController) {
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .background(Color.LightGray)
-                        .padding(8.dp)
+                        .background(Color.Black)
+                        .padding(8.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Image(
                         painter = painterResource(id = R.drawable.tabletred),
                         contentDescription = "Image 2",
                         modifier = Modifier
-                            .fillMaxWidth()
+                            .padding(start = 10.dp)
+                            .width(200.dp)
                             .height(200.dp)
-                            .clip(RoundedCornerShape(12.dp))
+                            .clip(RoundedCornerShape(12.dp)),
+
+
                     )
                     Spacer(modifier = Modifier.height(8.dp))
-                    Button(onClick = { /* Handle click */ }, modifier = Modifier.align(Alignment.CenterHorizontally)) {
-                        Text("View Image 2")
+                    Button(onClick = {navController.navigate(ROUT_TABLET)}, colors = ButtonDefaults.buttonColors(
+                        containerColor = Color.Black, contentColor = Color.Cyan
+                    ), modifier = Modifier.align(Alignment.CenterHorizontally)) {
+                        Text("View Products")
                     }
                 }
 

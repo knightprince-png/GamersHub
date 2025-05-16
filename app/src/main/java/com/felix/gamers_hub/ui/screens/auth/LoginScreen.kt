@@ -65,7 +65,7 @@ fun LoginScreen(
 
     Column(
         modifier = Modifier
-            .paint(painter = painterResource(R.drawable.image2), contentScale = ContentScale.Fit)
+
             .fillMaxSize()
             .padding(20.dp),
         verticalArrangement = Arrangement.Center,

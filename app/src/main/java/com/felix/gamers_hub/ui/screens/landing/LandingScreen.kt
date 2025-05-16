@@ -65,7 +65,7 @@ fun LandingScreen(navController: NavController){
 
 
         Button(onClick = {
-            navController.navigate (ROUT_HOME)
+            navController.navigate (ROUT_REGISTER)
         },
             modifier = Modifier.fillMaxWidth().height(40.dp),
             colors = ButtonDefaults.buttonColors(Darkblue),

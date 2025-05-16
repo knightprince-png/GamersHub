@@ -61,6 +61,7 @@ import androidx.navigation.compose.rememberNavController
 import com.felix.gamers_hub.R
 import com.felix.gamers_hub.model.Products
 import com.felix.gamers_hub.navigation.ROUT_HOME
+import com.felix.gamers_hub.navigation.ROUT_HOMEPAGE
 import com.felix.gamers_hub.navigation.ROUT_PHONE
 import com.felix.gamers_hub.ui.theme.Blue
 
@@ -72,15 +73,22 @@ fun HomePageScreen(navController: NavController){
         val mContext = LocalContext.current
 
 
+        Image(painter = painterResource(R.drawable.promo),
+            contentDescription = "img",
+            modifier = Modifier
+                .clickable(onClick = {})
+                .fillMaxWidth(),
+            contentScale = ContentScale.FillBounds
+        )
+        Spacer(modifier = Modifier.height(10.dp))
         Image(painter = painterResource(R.drawable.gamers),
             contentDescription = "img",
             modifier = Modifier
-                .clickable(onClick = {navController.navigate(ROUT_PHONE)})
-                .fillMaxWidth()
-                .fillMaxHeight(),
-            contentScale = ContentScale.FillHeight
+                .height(600.dp)
+                .clickable(onClick = {navController.navigate(ROUT_HOME)})
+                .fillMaxWidth(),
+            contentScale = ContentScale.FillBounds
         )
-        Spacer(modifier = Modifier.height(30.dp))
 
 
 

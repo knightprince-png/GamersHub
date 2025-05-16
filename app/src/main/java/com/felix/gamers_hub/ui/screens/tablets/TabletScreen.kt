@@ -1,5 +1,6 @@
 package com.felix.gamers_hub.ui.screens.tablets
 
+import android.R
 import android.adservices.topics.Topic
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -56,23 +57,8 @@ import com.felix.gamers_hub.navigation.ROUT_XIAOMI
 fun TabletScreen(navController: NavController){
     var selectedIndex by remember { mutableStateOf(0) }
 
-    Scaffold (
-        topBar = {
-            NavigationBar(
-                containerColor = Color.White
-            ) {
-                NavigationBarItem(
-                    icon = { Icon(Icons.Default.ArrowBack, contentDescription = "Home") },
-                    label = { Text("Home") },
-                    selected = selectedIndex == 0,
-                    onClick = {
-                        navController.navigate(ROUT_HOMEPAGE)
-                        //navController.navigate(ROUT_HOME)
-                    }
-                )
-            }
-        },
-        content = {paddingValues->
+
+
             Column(
                 modifier = Modifier
                     .background(Color.Black)
@@ -83,7 +69,7 @@ fun TabletScreen(navController: NavController){
 
                     .fillMaxSize()
                     .verticalScroll(rememberScrollState())
-                    .padding(paddingValues),
+                    .padding(10.dp),
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
                 // Image 1 + Button
@@ -309,11 +295,11 @@ fun TabletScreen(navController: NavController){
 
             }
         }
-    )
 
 
 
-}
+
+
 
 @Preview(showBackground = true)
 @Composable

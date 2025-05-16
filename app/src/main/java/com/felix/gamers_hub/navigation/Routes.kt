@@ -1,5 +1,7 @@
 package com.felix.gamers_hub.navigation
 
+import com.felix.gamers_hub.ui.screens.products.OnePageScreen
+
 const val ROUT_CONTACT = "contacts"
 const val ROUT_HOME = "home"
 const val ROUT_ABOUT = "about"
@@ -20,7 +22,9 @@ const val ROUT_BLACK = "black"
 const val ROUT_XIAOMI = "xiaomi"
 const val ROUT_ONE = "one"
 const val ROUT_TABS = "tabs"
+const val ROUT_TABLET = "tablet"
 const val ROUT_PHONE = "phone"
+
 
 
 

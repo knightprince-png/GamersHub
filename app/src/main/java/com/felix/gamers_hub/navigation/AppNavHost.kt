@@ -29,6 +29,7 @@ import com.felix.gamers_hub.ui.screens.products.TabsPageScreen
 import com.felix.gamers_hub.ui.screens.products.VivoPageScreen
 import com.felix.gamers_hub.ui.screens.products.XiaomiPageScreen
 import com.felix.gamers_hub.ui.screens.splash.SplashScreen
+import com.felix.gamers_hub.ui.screens.tablets.TabletScreen
 import com.felix.gamers_hub.viewmodel.AuthViewModel
 import com.felix.harakamall.data.UserDatabase
 import com.felix.harakamall.ui.Screens.auth.LoginScreen
@@ -122,6 +123,10 @@ fun AppNavHost(
         composable(ROUT_ONE){
             OnePageScreen(navController)
         }
+        composable(ROUT_TABLET){
+            TabletScreen(navController)
+        }
+
 
 
 
